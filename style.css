@@ -1,0 +1,695 @@
+/* ===== RESET & BASE ===== */
+/* pour les autres navigaterus n'applique automatique une bordure  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== HEADER & NAVIGATION ===== */
+/* C'est une fonction CSS qui crée un dégradé de couleurs en ligne droite. */
+
+
+.header {
+  background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+  color: white;
+  padding: 1.5rem 0;
+
+
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: sticky; 
+   /* C'est un positionnement hybride : l'élément se comporte comme relative jusqu'à un certain seuil de scroll, puis devient fixed.
+    */
+   top: 0;
+ /* top est une propriété qui définit la distance entre le bord supérieur d'un élément et son point de référence. */
+   
+  z-index: 1000; 
+
+  /* C'est une propriété qui contrôle l'ordre d'empilement des éléments sur l'axe Z (profondeur), c'est-à-dire qui passe devant qui. */
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+.logo span {
+  color: #3498db;
+  background: white;
+  padding: 0 8px;
+  border-radius: 4px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease; 
+  /* transition: [propriété] [durée] [timing-function] [délai]; */
+   /* C'est une propriété qui permet de définir des transitions CSS pour les propriétés spécifiées, avec une durée, une fonction de timing et un délai optionnel. */
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.1);
+/* transform permet de modifier visuellement un élément (déplacer, tourner, agrandir…) sans affecter le flux de la page */
+
+  transform: translateY(-2px);
+}
+
+.nav-links a.active {
+  background: rgba(255, 255, 255, 0.2);
+  border-bottom: 2px solid white;
+}
+
+.nav-btn {
+  background: #27ae60;
+  padding: 0.5rem 1.5rem !important;
+  border-radius: 25px;
+}
+
+.nav-btn:hover {
+  background: #2ecc71;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3);
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 6rem 0;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ===== PAGE HEADER ===== */
+.page-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.page-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.page-header p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn.primary {
+  background: #3498db;
+  color: white;
+}
+
+.btn.primary:hover {
+  background: #2980b9;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3);
+}
+
+.btn.secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn.secondary:hover {
+  background: white;
+  color: #3498db;
+  transform: translateY(-3px);
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  padding: 5rem 0;
+  background: white;
+}
+
+.section:nth-child(even) {
+  background: #f8f9fa;
+}
+
+.section h2,
+.section h3 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2.5rem;
+}
+
+.section h3 {
+  font-size: 2rem;
+}
+
+.section p {
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.section .btn {
+  display: block;
+  margin: 2.5rem auto 0;
+  width: fit-content;
+}
+
+/* ===== CARDS ===== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-left: 5px solid #3498db;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.card h3,
+.card h4 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.card p {
+  text-align: left;
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+  color: #666;
+}
+
+/* ===== SERVICES PREVIEW ===== */
+.services-preview {
+  padding: 5rem 0;
+  background: white;
+  text-align: center;
+}
+
+.services-preview h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #2c3e50;
+}
+
+/* ===== ABOUT PREVIEW ===== */
+.about-preview {
+  padding: 5rem 0;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+.about-preview h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+}
+
+.about-list {
+  list-style: none;
+  max-width: 600px;
+  margin: 2rem auto;
+  text-align: left;
+}
+
+.about-list li {
+  padding: 1rem;
+  font-size: 1.2rem;
+  background: white;
+  margin: 1rem 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== HERO IMAGE ===== */
+.hero-img {
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* CTA SECTION  */
+.cta {
+  background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+  color: white;
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.cta p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+/* CONTACT PAGE  */
+.contact {
+  padding: 5rem 0;
+  background: white;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+/* grid-template-columns: 1fr 1fr en CSS
+Cette propriété définit le nombre et la taille des colonnes d'une grille CSS */
+
+  gap: 4rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact-info h3,
+.contact-form h3 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+}
+
+.contact-info p {
+  font-size: 1.1rem;
+  margin: 1rem 0;
+  text-align: left;
+  color: #555;
+}
+
+.contact-note {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #e8f4f8;
+  border-radius: 8px;
+  border-left: 4px solid #3498db;
+  font-style: italic;
+}
+
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 1rem;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #2c3e50;
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-socials a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+.footer-socials a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.navbar {
+  background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-hero {
+  min-height: auto;
+  padding: 4rem 0;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-text h1 span {
+  color: #3498db;
+}
+
+.about-section {
+  padding: 5rem 0;
+  background: white;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.about-text p {
+  text-align: left;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.values {
+  padding: 5rem 0;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+.values h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 3rem;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.value-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-10px);
+}
+
+.value-card img {
+  width: 100%;
+  height: 200px;
+  margin: 0 0 1.5rem 0;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.value-card h3 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.value-card p {
+  text-align: center;
+  color: #666;
+  font-size: 1rem;
+}
+
+.why-us {
+  padding: 5rem 0;
+  background: white;
+}
+
+.why-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.why-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.why-text h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.why-text p {
+  text-align: left;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+footer .socials {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+footer .socials a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+footer .socials a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .page-header h2 {
+    font-size: 2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-container,
+  .why-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .about-text h2,
+  .about-text p,
+  .why-text h2,
+  .why-text p {
+    text-align: center;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .section h2 {
+    font-size: 1.8rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+}
